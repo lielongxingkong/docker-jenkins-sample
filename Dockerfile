@@ -4,4 +4,6 @@ ENV REFRESHED_AT 2016-01-24
 
 RUN yum makecache
 RUN yum install -y ruby rake
+
+RUN gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 RUN gem install --no-rdoc --no-ri rspec ci_reporter_rspec
